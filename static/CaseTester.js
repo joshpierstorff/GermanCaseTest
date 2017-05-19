@@ -1,3 +1,4 @@
+//Javascript objects that define our cases
 var nomCase = {
     masculine: "der",
     feminine: "die",
@@ -30,12 +31,14 @@ function getRandomNumber(num) {
 }
 
 function getRandomQuiz() {
+    //Randomly select our case, gender, and article type
     var qcase = getRandomNumber(3);
     var gender = getRandomNumber(3);
     var indefinite = getRandomNumber(2);
     var questionText = "";
     var questionAnswer = "";
 
+    //Build the question text
     switch (indefinite) {
         case 1:
             questionText = "Definite ";
@@ -70,10 +73,13 @@ function getRandomQuiz() {
             break;
     }
 
+    //Display the question text and store our case, gender, and article type in the html element
     $('.questionHolder').text(questionText);
     $('.questionHolder').attr('data-case', qcase);
     $('.questionHolder').attr('data-gender', gender);
     $('.questionHolder').attr('data-indefinite', indefinite);
+
+    //Reset input fields
     $('#txtAnswer').val('');
     $('.resultHolder').text('');
     $('.correctAnswer').text('');
@@ -128,6 +134,7 @@ function validate() {
     }
 }
 
+//This runs when the page loads
 $(function () {
     getRandomQuiz();
 });
