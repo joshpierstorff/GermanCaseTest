@@ -3,3 +3,27 @@
     text-decoration:underline;
     cursor: pointer;
 }
+.articleTable {
+	margin: 1em 0;
+	background-color: #f8f9fa;
+	border: 1px solid #a2a9b1;
+	border-collapse: collapse;
+	color: #000;
+}
+.articleTable tr th {
+	border: 1px solid #a2a9b1;
+	padding: 0.2em 0.4em;
+	background-color: #eaecf0;
+	text-align: center;
+}
+th {
+	font-weight: bold;
+	width: 20%;
+}
+td{
+	padding: 0 8px;
+}
+th td {
+	display: table-cell;
+	vertical-align: inherit;
+}
