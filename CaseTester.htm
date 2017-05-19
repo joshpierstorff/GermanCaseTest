@@ -1,35 +1,146 @@
-<link rel='stylesheet' href='CaseTester.css'/>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel='stylesheet' href='CaseTester.css'>
 
-<div class="col-md-8">
-	<div class="page-header">
-		<h1>German Case Tester</h1>
-	</div>
+<div class="col-md-12">
+    <div class="page-header">
+        <h1>German Case Tester</h1>
+    </div>
 
-	<span class="questionHolder"></span>
+    <span class="questionHolder"></span>
 
-	<br/>
-	<br/>
-	<input type="text" id="txtAnswer"></input> <a onClick="validate();">Check</a>
+    <br />
+    <br />
+    <input type="text" id="txtAnswer"></input> <a onclick="validate();">Check</a>
 
-	<br/>
-	<br/>
-	<a onClick="getRandomQuiz();">Random Quiz</a>
+    <br />
+    <br />
+    <a onclick="getRandomQuiz();">Random Quiz</a>
 
-	<br/>
-	<br/>
-	<span class="resultHolder"></span>
+    <br />
+    <br />
+    <span class="resultHolder"></span>
 
-	<br/>
-	<span class="correctAnswer"></span>
+    <br />
+    <span class="correctAnswer"></span>
 
-	<div id="tableContainer">
-		<table id="accTable">
-			<thead></thead>
-		</table>
-	</div>
+    <div id="tableContainer">
+        <table id="accTable">
+            <thead></thead>
+        </table>
+    </div>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#cheatsheet">View Articles</button>
 
-<a href='https://www.linkedin.com/in/jordan-dukes-5007281a'><i class="fa fa-linkedin-square fa-3x"></i></a>	
+    <!-- Modal -->
+    <div class="modal fade" id="cheatsheet" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">German Articles</h4>
+                </div>
+                <div class="modal-body">
+                    <!--Indifinite Articles-->
+                    <table class="articleTable">
+                        <caption>Indefinite article endings (<a href="/wiki/German_adjectives#Mixed_inflection" title="German adjectives">mixed</a>)</caption>
+                        <tr>
+                            <th></th>
+                            <th>Masculine</th>
+                            <th>Neuter</th>
+                            <th>Feminine</th>
+                            <th>Plural</th>
+                        </tr>
+                        <tr>
+                            <th><a href="/wiki/Nominative_case" title="Nominative case">Nominative</a></th>
+                            <td><i>ein</i></td>
+                            <td><i>ein</i></td>
+                            <td><i>ein<b>e</b></i></td>
+                            <td><i>-ein<b>e</b></i></td>
+                        </tr>
+                        <tr>
+                            <th><a href="/wiki/Accusative_case" title="Accusative case">Accusative</a></th>
+                            <td><i>ein<b>en</b></i></td>
+                            <td><i>ein</i></td>
+                            <td><i>ein<b>e</b></i></td>
+                            <td><i>-ein<b>e</b></i></td>
+                        </tr>
+                        <tr>
+                            <th><a href="/wiki/Dative_case" title="Dative case">Dative</a></th>
+                            <td><i>ein<b>em</b></i></td>
+                            <td><i>ein<b>em</b></i></td>
+                            <td><i>ein<b>er</b></i></td>
+                            <td><i>-ein<b>en</b></i></td>
+                        </tr>
+                        <tr>
+                            <th><a href="/wiki/Genitive_case" title="Genitive case">Genitive</a></th>
+                            <td><i>ein<b>es</b></i></td>
+                            <td><i>ein<b>es</b></i></td>
+                            <td><i>ein<b>er</b></i></td>
+                            <td><i>-ein<b>er</b></i></td>
+                        </tr>
+                    </table>
+                    <!--Definite Articles-->
+                    <table class="articleTable">
+                        <caption>Definite article (<a href="/wiki/German_adjectives#Strong_inflection" title="German adjectives">strong</a>)</caption>
+                        <tr>
+                            <th></th>
+                            <th>Masculine</th>
+                            <th>Neuter</th>
+                            <th>Feminine</th>
+                            <th>Plural</th>
+                        </tr>
+                        <tr>
+                            <th><a href="/wiki/Nominative_case" title="Nominative case">Nominative</a></th>
+                            <td>der</td>
+                            <td>das</td>
+                            <td>die</td>
+                            <td>die</td>
+                        </tr>
+                        <tr>
+                            <th><a href="/wiki/Accusative_case" title="Accusative case">Accusative</a></th>
+                            <td>den</td>
+                            <td>das</td>
+                            <td>die</td>
+                            <td>die</td>
+                        </tr>
+                        <tr>
+                            <th><a href="/wiki/Dative_case" title="Dative case">Dative</a></th>
+                            <td>dem</td>
+                            <td>dem</td>
+                            <td>der</td>
+                            <td>den</td>
+                        </tr>
+                        <tr>
+                            <th><a href="/wiki/Genitive_case" title="Genitive case">Genitive</a></th>
+                            <td>des</td>
+                            <td>des</td>
+                            <td>der</td>
+                            <td>der</td>
+                        </tr>
+                    </table>
+                    <!--Indifinite Articles-->
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <hr>
+        <a href='https://www.linkedin.com/in/jordan-dukes-5007281a'><i class="fa fa-linkedin-square fa-3x"></i></a>
+    </div>
+</div>
 </div>
 
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type='text/javascript' src='CaseTester.js' ></script>
+<script type='text/javascript' src='CaseTester.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
