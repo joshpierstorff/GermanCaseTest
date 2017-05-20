@@ -26,13 +26,22 @@ var datCase = {
     indefNeut: "einem"
 };
 
+var genCase = {
+    masculine: "des",
+    feminine: "der",
+    neuter: "des",
+    indefMasc: "eines",
+    indefFem: "einer",
+    indefNeut: "eines"
+};
+
 function getRandomNumber(num) {
     return Math.floor((Math.random() * num) + 1);
 }
 
 function getRandomQuiz() {
     //Randomly select our case, gender, and article type
-    var qcase = getRandomNumber(3);
+    var qcase = getRandomNumber(4);
     var gender = getRandomNumber(3);
     var indefinite = getRandomNumber(2);
     var questionText = "";
@@ -70,6 +79,9 @@ function getRandomQuiz() {
             break;
         case 3:
             questionText += "the Dative case:";
+            break;
+		case 4:
+            questionText += "the Genitive case:";
             break;
     }
 
@@ -116,6 +128,16 @@ function getAnswer(qcase, gender, indefinite) {
         } 
     }
 
+	if (qcase ==4) {
+		if (gender == 1 || gender == 3) {
+			if (indefinite == 1) return "des";
+			else return "eines";
+		} else if (gender == 2) {
+			if (indefinite == 1) return "der";
+			else return "einer";
+		}
+	}
+	
     return "nom";
 }
 
