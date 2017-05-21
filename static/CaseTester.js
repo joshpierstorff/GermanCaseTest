@@ -130,7 +130,7 @@ function validate() {
         $("#correct").show();
     } else {
         $("#incorrect").show();
-        $('.correctAnswer').text('The correct answer is ' + answer);
+        $('.correctAnswer').text('The correct answer is ' + answer + '.');
     }
 }
 
