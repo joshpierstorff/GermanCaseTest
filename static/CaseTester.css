@@ -27,3 +27,5 @@ th td {
 	display: table-cell;
 	vertical-align: inherit;
 }
+a:hover {
+	cursor: pointer}
