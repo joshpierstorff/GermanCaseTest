@@ -160,3 +160,9 @@ function validate() {
 $(function () {
     getRandomQuiz();
 });
+
+$("#txtAnswer").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#check").click();
+    }
+});
