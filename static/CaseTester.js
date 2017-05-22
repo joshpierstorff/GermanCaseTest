@@ -149,10 +149,10 @@ function validate() {
     var userAnswer = $('#txtAnswer').val();
 
     if (userAnswer === answer) {
-        $('.resultHolder').text('Correct!');
+        $("#correct").show();
     } else {
-        $('.resultHolder').text('Incorrect!');
-        $('.correctAnswer').text('The correct answer is ' + answer);
+        $("#incorrect").show();
+        $('.correctAnswer').text('The correct answer is ' + answer + '.');
     }
 }
 

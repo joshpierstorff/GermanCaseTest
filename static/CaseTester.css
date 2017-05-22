@@ -27,5 +27,15 @@ th td {
 	display: table-cell;
 	vertical-align: inherit;
 }
+.fa-check {
+	color: green;
+}
+.fa-times {
+	color: red;
+}
+.btn-info {
+	margin-top: 25px;
+}
 a:hover {
-	cursor: pointer}
+	cursor: pointer
+}
